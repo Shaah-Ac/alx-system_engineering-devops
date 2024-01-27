@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Get the process ID of the current script using $$
+pid=$$
+
+# Print the PID to the console
+echo "$pid"
