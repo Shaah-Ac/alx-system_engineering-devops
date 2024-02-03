@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays 'school is good' indefinitely.
+while "true"
+do 
+	echo "school is good" > /tmp/my_process
+	sleep 2
+done

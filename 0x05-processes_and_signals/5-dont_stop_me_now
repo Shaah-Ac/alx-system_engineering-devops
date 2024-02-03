@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# stop 'To infinity and beyond' indefinitely,
+while "true"
+do
+	kill
+done

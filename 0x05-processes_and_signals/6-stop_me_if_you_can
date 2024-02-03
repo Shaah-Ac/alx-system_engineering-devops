@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# stop 'To infinity and beyond' indefinitely,
+if 'To infinity and beyond'
+	echo 'not found'
+exit 
+fi
