@@ -9,7 +9,7 @@ while [ $hours -le 12 ]; do
 	echo "Hour: $hour 1"
 	minutes=1
 	while [ $minutes -le 59 ]; do
-        printf "%02d\n" $minutes
+        printf "%2d\n" $minutes
 	(( minutes++ ))    
     done
     ((hours++))
