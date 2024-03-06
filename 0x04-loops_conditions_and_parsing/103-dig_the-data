@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+log_file="apache-access.log"
+
+if [ -f "$log_file" ]; then
+    awk '{print $1, $9}' "$log_file" | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}'
+else
+    echo "Error: Apache log file does not exist."
+fi
