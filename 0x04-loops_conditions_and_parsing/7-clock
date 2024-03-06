@@ -9,9 +9,6 @@ while [ $hour -le 12 ]; do
     echo "Hour: $hour"
     for minute in {1..59}; do
         echo $minute
-        if [ $hour -eq 12 ] && [ $minute -eq 59 ]; then
-            break 2
-        fi
     done
     ((hour++))
-done
+done | head -n 71
