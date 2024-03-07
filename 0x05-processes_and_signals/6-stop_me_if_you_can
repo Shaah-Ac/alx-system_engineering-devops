@@ -1,6 +1,21 @@
 #!/usr/bin/env bash
-# target pid '4-to_infinity_and_beyond'
-if [[ -z "$target_pid" ]]; then
-echo "Target process not found."
-exit 1
+
+# Check if the process is running
+if pgrep -x "4-to_infinity_and_beyond" > /dev/null
+then
+    # Get the process ID
+    pid=$(pgrep -x "4-to_infinity_and_beyond")
+
+    # Terminate the process using SIGTERM
+    kill -TERM $pid
+
+    # Wait for the process to terminate
+    while pgrep -x "4-to_infinity_and_beyond" > /dev/null
+    do
+        sleep 1
+    done
+
+    echo "4-to_infinity_and_beyond process stopped."
+else
+    echo "4-to_infinity_and_beyond process is not running."
 fi

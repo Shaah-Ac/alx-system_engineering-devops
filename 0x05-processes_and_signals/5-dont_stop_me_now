@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-# target process '4-to_infinity_and_beyond'
-if [[ -z "$target_pid" ]]; then
-  echo "Target process not found."
-  exit 1
+
+# Check if the process is running
+if pgrep -x "4-to_infinity_and_beyond" > /dev/null
+then
+    # Process is running, so we'll kill it
+    echo "Stopping 4-to_infinity_and_beyond process..."
+    killall 4-to_infinity_and_beyond
+    echo "4-to_infinity_and_beyond process stopped."
+else
+    echo "4-to_infinity_and_beyond process is not running."
+fi

@@ -6,7 +6,7 @@
 hours=0
 
 while [ $hours -le 12 ]; do
-	echo "Hour: $hour 1"
+	echo "Hour %2d/n: $hour 1"
 	minutes=1
 	while [ $minutes -le 59 ]; do
         printf "%2d\n" $minutes
